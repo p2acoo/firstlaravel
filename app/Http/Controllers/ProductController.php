@@ -46,7 +46,8 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+
+        return Response::view('products.edit', compact('product'));
 
     }
 
@@ -58,7 +59,9 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+
+        $product->update($request->all());
+        return redirect()->route('products.show', $product);
     }
 
     /**

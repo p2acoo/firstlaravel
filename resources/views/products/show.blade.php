@@ -8,6 +8,8 @@
 <p> {{ $product->created_at }} </p>
 <p> {{ $product->updated_at }} </p>
 <a href="{{ route('products.index') }}"> Retour à la liste des produits </a>
+<br>
+<a href="{{ route('products.edit', $product->id) }}"> Modifier le produit </a>
 @endsection
 
 
